@@ -2,7 +2,7 @@
 
 Reference: `/home/yukidama/github/vkb_disasm`, revision `6403052ad62852d2159d9e623ba608d5a3259c76` (2026-10-22).
 
-The reference was read as a device interaction specification. No original Android Java, native implementation, resource layout, artwork, sample audio, Realm database, preset record, or bundled lyric/song content was copied into this project. The interface, navigation, layout, visual elements, and browser implementation were written anew.
+The reference was read as a device interaction specification and, at the user's later request, for the original gray palette and singer theme color values. No original Android Java, native implementation, resource layout, artwork, sample audio, Realm database, preset record, or bundled lyric/song content was copied into this project. The interface, keyboard logo, navigation, layout, visual elements, and browser implementation were written anew.
 
 ## Consulted low-level material
 
@@ -24,7 +24,19 @@ Only functional facts from these catalogs were transformed into browser data:
 | `docs/catalog/text-mappings.csv` | `public/data/lyrics.json` | Explicit kana conversions and display bytes |
 | `docs/catalog/skills.json` | `public/data/skills.json` | Four opaque 162-byte device performance-skill payloads |
 
-The sound catalog was inspected to establish the 13 instrument choices and singer identity prefixes. Its asset identifiers, vendor descriptions, artwork/color/audio references, and product IDs were not retained. UI global labels and boolean choices are supplied by the new application.
+The sound catalog was inspected to establish the 13 instrument choices, singer identity prefixes, and singer-to-color mapping. Its asset identifiers, vendor descriptions, artwork/audio references, and product IDs were not retained. UI global labels and boolean choices are supplied by the new application.
+
+At the user's explicit request, color values were read from `analysis/jadx/resources/res/values/colors.xml` and used in the new stylesheet and `public/js/theme.js`:
+
+| Theme | Accent | Background |
+| --- | --- | --- |
+| VY1 | `#fb6d6d` | `#fdece7` |
+| Hatsune Miku | `#29c8c8` | `#dcf3ef` |
+| Megpoid | `#3ecd54` | `#d8fbce` |
+| IA | `#d06d6d` | `#fae7e7` |
+| Yuzuki Yukari | `#9c66d6` | `#f2e4f7` |
+
+The neutral base uses the reference's dark gray `#505050`, gray `#818181`, light gray `#f0f0f0`, and white `#fefefe`, with additional neutral shades for borders and readable secondary text. Theme colors are scoped to the vocal editor and follow the canonical singer identity stored in its draft, independently of the device's registry ordering. Exact accents and background tints are retained; text shades are darkened where needed to achieve readable contrast. No original color XML, layout, or logo asset is included.
 
 The functional data can be regenerated with:
 

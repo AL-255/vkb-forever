@@ -42,6 +42,20 @@ test('offline voice and instrument editors expose every bank parameter and persi
   assert.equal(document.querySelectorAll('[data-selector] option').length,13);
   await route('vocal');assert.ok($('[data-param="Gender3"]'));
 });
+test('each selected singer applies its reference colors and other routes clear the theme',async()=>{
+  const expected=[['VY1','#fb6d6d','#fdece7'],['MIKU','#29c8c8','#dcf3ef'],['MEG','#3ecd54','#d8fbce'],['IA','#d06d6d','#fae7e7'],['YUKARI','#9c66d6','#f2e4f7']];
+  for(let i=0;i<expected.length;i++){
+    fill('[data-selector="vocal"]',String(i),'change');
+    assert.equal($('#main').dataset.singer,expected[i][0]);
+    assert.equal($('#main').style.getPropertyValue('--singer-accent'),expected[i][1]);
+    assert.equal($('#main').style.getPropertyValue('--singer-background'),expected[i][2]);
+    assert.equal(JSON.parse(localStorage.getItem('vkb-forever.workspace.v1')).drafts.vocal.values.VocaloNumber,i);
+    assert.ok($('[data-param="Gender3"]'));
+  }
+  await route('pcm');assert.equal($('#main').dataset.singer,undefined);assert.equal($('#main').style.getPropertyValue('--singer-accent'),'');
+  await route('vocal');assert.equal($('#main').dataset.singer,'YUKARI');
+  fill('[data-selector="vocal"]','0','change');
+});
 test('library supports save, update, duplicate and escaped names',async()=>{
   click('[data-action="save"]');fill('#save-name','<img src=x onerror=alert(1)>');click('#save-library');
   assert.equal(JSON.parse(localStorage.getItem('vkb-forever.workspace.v1')).library.length,1);

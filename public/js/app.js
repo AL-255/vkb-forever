@@ -4,6 +4,7 @@ import { frame, encodeParameter, decodeParameter, readU7 } from './protocol.js';
 import { parseLyrics, lyricPayload, soundTitle, decodeLyric, titleBytes } from './lyrics.js';
 import { newLyric, loadWorkspace, saveWorkspace, validateWorkspace, defaultWorkspace } from './store.js';
 import { soundMessages, soundValue, canonicalSinger } from './sound.js';
+import { applySingerTheme } from './theme.js';
 
 const $ = (s, root = document) => root.querySelector(s);
 const esc = text => String(text).replace(/[&<>"']/g, ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[ch]));
@@ -116,6 +117,7 @@ function helpPage() {
 }
 function render() {
   if (!data || !workspace) return;
+  applySingerTheme($('#main'), route === 'vocal' ? workspace.drafts.vocal.values.VocaloNumber : null);
   $('#breadcrumb').textContent = names[route];
   document.querySelectorAll('[data-route]').forEach(a => { const active = a.dataset.route === route; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
   const warning = startupWarning || storageError;
