@@ -115,7 +115,7 @@ p {
 }
 .brand-keyboard {
   display:block;
-  width:96px;
+  width:156px;
   height:auto;
 }
 .brand-name {
@@ -1100,7 +1100,7 @@ dialog .toolbar {
     gap:7px;
   }
   .brand-keyboard {
-    width:76px
+    width:128px
   }
   .brand-name {
     font-size:16px

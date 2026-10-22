@@ -1,9 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 52" fill="none">
-  <rect x="2" y="2" width="92" height="48" rx="5" fill="#505050" stroke="#fefefe" stroke-width="2"/>
-  <circle cx="10" cy="10" r="2" fill="#fefefe"/>
-  <circle cx="18" cy="10" r="2" fill="#818181"/>
-  <path d="M72 10h14" stroke="#818181" stroke-width="2" stroke-linecap="round"/>
-  <rect x="8" y="17" width="80" height="27" rx="2" fill="#fefefe"/>
-  <path d="M19.4 17v27M30.9 17v27M42.3 17v27M53.7 17v27M65.1 17v27M76.6 17v27" stroke="#505050"/>
-  <path d="M16 17h7v16h-7zM27.4 17h7v16h-7zM50.2 17h7v16h-7zM61.6 17h7v16h-7zM73.1 17h7v16h-7z" fill="#505050"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 104" fill="none">
+  <title>VKB-100-style keytar</title>
+  <desc>Original vector drawing of a white keytar with a black left-hand grip, three octaves of keys, and two right-side knobs.</desc>
+  <g transform="rotate(-12 128 52)" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Rounded body and dark end cap. -->
+    <path d="M69 35H238Q247 35 247 44V68Q247 77 238 77H69Q61 77 61 69V44Q61 35 69 35Z" fill="#fefefe" stroke="#bdbdbd" stroke-width="1.5"/>
+    <path d="M239 35H241Q247 36 247 44V68Q247 76 239 77Z" fill="#303030"/>
+    <path d="M70 73H238" stroke="#d8d8d8"/>
+    <!-- Slim grip extends past the shoulder along the upper edge. -->
+    <path d="M9 35H97V45Q97 50 91 50H65Q60 50 58 47L56 45H9Q5 45 5 41V39Q5 35 9 35Z" fill="#303030" stroke="#a0a0a0" stroke-width="1.2"/>
+    <g fill="#818181">
+      <rect x="15" y="37.5" width="3.5" height="5" rx="1"/>
+      <rect x="24" y="37.5" width="3.5" height="5" rx="1"/>
+      <rect x="33" y="37.5" width="3.5" height="5" rx="1"/>
+      <rect x="48" y="37.5" width="3.5" height="5" rx="1"/>
+      <rect x="57" y="37.5" width="3.5" height="5" rx="1"/>
+      <rect x="71" y="36.5" width="4.5" height="8" rx="1.2"/>
+      <rect x="80" y="36.5" width="4.5" height="8" rx="1.2"/>
+    </g>
+    <!-- Display below the grip, beside the keyboard. -->
+    <rect x="67" y="65" width="25" height="6" rx="1.3" fill="#303030"/>
+    <path d="M71 68H79M82 68H88" stroke="#a0a0a0" stroke-width="1.2"/>
+    <!-- 22 white keys and 15 black keys, drawn as simple geometry. -->
+    <rect x="100" y="43" width="110" height="27" rx="1" fill="#fefefe" stroke="#303030" stroke-width="1.5"/>
+    <path d="M105 44V69M110 44V69M115 44V69M120 44V69M125 44V69M130 44V69M135 44V69M140 44V69M145 44V69M150 44V69M155 44V69M160 44V69M165 44V69M170 44V69M175 44V69M180 44V69M185 44V69M190 44V69M195 44V69M200 44V69M205 44V69" stroke="#818181" stroke-width=".7"/>
+    <path d="M103.2 43H106.8V59H103.2ZM108.2 43H111.8V59H108.2ZM118.2 43H121.8V59H118.2ZM123.2 43H126.8V59H123.2ZM128.2 43H131.8V59H128.2ZM138.2 43H141.8V59H138.2ZM143.2 43H146.8V59H143.2ZM153.2 43H156.8V59H153.2ZM158.2 43H161.8V59H158.2ZM163.2 43H166.8V59H163.2ZM173.2 43H176.8V59H173.2ZM178.2 43H181.8V59H178.2ZM188.2 43H191.8V59H188.2ZM193.2 43H196.8V59H193.2ZM198.2 43H201.8V59H198.2Z" fill="#303030"/>
+    <!-- Rotary controls and the short selector fader. -->
+    <circle cx="225" cy="47" r="5.3" fill="#303030"/>
+    <path d="M225 43.5V45.5" stroke="#a0a0a0" stroke-width="1.2"/>
+    <circle cx="230" cy="64" r="4.2" fill="#303030"/>
+    <path d="M219 56V67" stroke="#818181" stroke-width="1.3"/>
+    <rect x="216.5" y="57" width="5" height="3.5" rx=".8" fill="#303030"/>
+  </g>
 </svg>

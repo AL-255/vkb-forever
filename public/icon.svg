@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#505050"/><rect x="8" y="18" width="48" height="29" rx="3" fill="#fefefe"/><path d="M16 18v29m8-29v29m8-29v29m8-29v29m8-29v29" stroke="#505050"/><path d="M13 18h6v17h-6zm8 0h6v17h-6zm16 0h6v17h-6zm8 0h6v17h-6z" fill="#505050"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#505050"/>
+  <g transform="rotate(-24 32 32)" stroke-linejoin="round">
+    <rect x="17" y="26" width="42" height="18" rx="3" fill="#fefefe"/>
+    <path d="M6 26H25V31H6Q4 31 4 29Q4 26 6 26Z" fill="#303030" stroke="#bdbdbd" stroke-width="1"/>
+    <path d="M27 31H49V41H27ZM30 31V41M33 31V41M36 31V41M39 31V41M42 31V41M45 31V41" fill="none" stroke="#505050" stroke-width="1"/>
+    <path d="M29 31V36M32 31V36M38 31V36M41 31V36M44 31V36" stroke="#303030" stroke-width="1.8"/>
+    <circle cx="54" cy="31" r="2" fill="#303030"/>
+    <circle cx="54" cy="39" r="1.5" fill="#303030"/>
+    <path d="M57 26H59V44H57Z" fill="#303030"/>
+  </g>
+</svg>

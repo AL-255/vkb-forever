@@ -46,6 +46,10 @@ python3 scripts/reference-data.py ~/github/vkb_disasm
 
 The application does not load the reference at runtime. All algorithms are new JavaScript implementations of the documented wire rules. Tests use synthetic, newly written lyrics and presets. Browser APIs and local storage replace Android transport and database behavior. Original app lifecycle bugs, stale timers, partial malformed parsers, and UI state quirks are not deliberately reproduced.
 
+## Keytar logo
+
+The keytar logo and favicon are newly authored SVG geometry. The VKB-100's body proportions, black grip, key opening, display, and right-side controls were observed in [Yamaha's design photographs](https://www.yamaha.com/en/tech-design/design/insights/id_104/) and an [official front-view product photograph](https://jp.yamaha.com/files/Photo_VKB-100_o_0001_a01a16d75a2b90335c488e6ad6d9ff6e.jpg). These images were used only as visual references outside the repository. The logo contains no embedded image, traced bitmap, vendor wordmark, or reused drawing.
+
 ## External primary references
 
 - [Chrome Web Bluetooth guide](https://developer.chrome.com/docs/capabilities/bluetooth): browser/platform requirements, secure context, gestures and GATT lifecycle.
